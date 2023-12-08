@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('contact', function (Blueprint $table) {
             $table->integer('id')->primary();
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('lkp_contact_type_id');
-            $table->foreign('lkp_contact_type_id')->references('id')->on('lkp_contact_type');
+            // $table->foreign('lkp_contact_type_id')->references('id')->on('lkp_contact_type');
             $table->string('description');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
