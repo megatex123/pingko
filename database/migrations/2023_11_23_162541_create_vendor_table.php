@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('vendor', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('lkp_vendor_speciality_id');
-            $table->foreign('lkp_vendor_speciality_id')->references('id')->on('lkp_vendor_speciality');
+            // $table->foreign('lkp_vendor_speciality_id')->references('id')->on('lkp_vendor_speciality');
             $table->string('ssm_no');
             $table->text('vendor_description');
             $table->bigInteger('attachment_id');
-            $table->foreign('attachment_id')->references('id')->on('attachment');
+            // $table->foreign('attachment_id')->references('id')->on('attachment');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');

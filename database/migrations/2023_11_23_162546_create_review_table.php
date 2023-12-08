@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('review', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('lkp_rate_id');
-            $table->foreign('lkp_rate_id')->references('id')->on('lkp_rate');
+            // $table->foreign('lkp_rate_id')->references('id')->on('lkp_rate');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('vendor_id');
-            $table->foreign('vendor_id')->references('id')->on('vendor');
+            // $table->foreign('vendor_id')->references('id')->on('vendor');
             $table->text('user_comment');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

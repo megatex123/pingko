@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('address', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->text('description');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

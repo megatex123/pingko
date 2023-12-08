@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('review_id')->nullable();
-            $table->foreign('review_id')->references('id')->on('review');
+            // $table->foreign('review_id')->references('id')->on('review');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('vendor_id');
-            $table->foreign('vendor_id')->references('id')->on('vendor');
+            // $table->foreign('vendor_id')->references('id')->on('vendor');
             $table->integer('lkp_booking_status_id');
-            $table->foreign('lkp_booking_status_id')->references('id')->on('lkp_booking_status_id');
+            // $table->foreign('lkp_booking_status_id')->references('id')->on('lkp_booking_status_id');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
             $table->dateTime('deleted_at');

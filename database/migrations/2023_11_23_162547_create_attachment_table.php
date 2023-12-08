@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('attachment', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('lkp_attachment_type_id');
-            $table->foreign('lkp_attachment_type_id')->references('id')->on('lkp_attchment_type_id');
+            // $table->foreign('lkp_attachment_type_id')->references('id')->on('lkp_attchment_type_id');
             $table->string('filename');
             $table->string('display');
             $table->string('path');

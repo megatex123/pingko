@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('car', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            // $table->foreign('user_id')->references('id')->on('user');
             $table->integer('lkp_car_type_id');
-            $table->foreign('lkp_car_type_id')->references('id')->on('lkp_car_type');
+            // $table->foreign('lkp_car_type_id')->references('id')->on('lkp_car_type');
             $table->integer('lkp_car_brand_id');
-            $table->foreign('lkp_car_brand_id')->references('id')->on('lkp_car_brand_id');
+            // $table->foreign('lkp_car_brand_id')->references('id')->on('lkp_car_brand_id');
             $table->integer('lkp_car_name_id');
-            $table->foreign('lkp_car_name_id')->references('id')->on('lkp_car_name');
+            // $table->foreign('lkp_car_name_id')->references('id')->on('lkp_car_name');
             $table->string('license_plate_no');
             $table->integer('year');
             $table->string('version');

@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('lkp_user_type_id');
-            $table->foreign('lkp_user_type_id')->references('id')->on('lkp_user_type');
+            // $table->foreign('lkp_user_type_id')->references('id')->on('lkp_user_type');
             $table->integer('account_id');
-            $table->foreign('account_id')->references('id')->on('account');
+            // $table->foreign('account_id')->references('id')->on('account');
             $table->text('name');
             $table->string('email');
             $table->integer('age');
