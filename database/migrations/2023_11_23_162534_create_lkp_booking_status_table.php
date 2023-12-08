@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('lkp_attchment_type_id', function (Blueprint $table) {
+        Schema::create('lkp_booking_status', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
             $table->dateTime('created_at');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lkp_attchment_type_id');
+        Schema::dropIfExists('lkp_booking_status');
     }
 };
